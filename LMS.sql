@@ -1,7 +1,5 @@
 CREATE DATABASE LMS;
 USE LMS;
-
-
 -- AUTHORS
 CREATE TABLE Authors (
     AuthorID INT PRIMARY KEY AUTO_INCREMENT,
@@ -24,8 +22,6 @@ CREATE TABLE Books (
     ISBN VARCHAR(20) UNIQUE,
     AvailableCopies INT DEFAULT 0
 );
-
-
 INSERT INTO Books (Title, AuthorID, Genre, PublishDate, ISBN, AvailableCopies) VALUES
 ('The Great Gatsby', 1, 'Fiction', '1925-04-10', '9780743273565', 3),
 ('To Kill a Mockingbird', 2, 'Fiction', '1960-07-11', '9780061120084', 2),
@@ -46,8 +42,6 @@ INSERT INTO Members (name, email, phone) VALUES
 ('Bob Smith', 'bob.smith@example.com', '234-567-8901'),
 ('Charlie Brown', 'charlie.brown@example.com', '345-678-9012'),
 ('Diana Prince', 'diana.prince@example.com', '456-789-0123'),
-
-
 
 
 --  Reservations
@@ -76,4 +70,25 @@ CREATE TABLE Librarian (
 
 INSERT INTO Librarian (LibrarianID, FirstName, LastName, Email, Phone) VALUES
 (23,'Sarah', 'Connor', 'sarah.connor@example.com', '555-123-4567');
+
+
+ -- Transactions
+CREATE TABLE Transactions (
+    TransactionID INT PRIMARY KEY AUTO_INCREMENT,
+    BookID INT,
+    MemberID INT,
+    TransactionType ENUM('Loan', 'Return', 'Fee') NOT NULL,
+    TransactionDate DATE ,
+    DueDate DATE,
+    ReturnDate DATE,
+    Fee DECIMAL(10, 2) DEFAULT 0.00
+    
+);
+
+INSERT INTO Transactions (BookID, MemberID, TransactionType, TransactionDate, DueDate, ReturnDate, Fee) VALUES
+(1, 1, 'Loan', CURRENT_DATE, '2024-11-10', NULL, 0.00),  
+(2, 2, 'Loan', CURRENT_DATE, '2024-11-15', NULL, 0.00),  
+(1, 1, 'Return', '2024-10-20', NULL, '2024-10-20', 0.00), 
+(3, 3, 'Loan', CURRENT_DATE, '2024-11-12', NULL, 0.00);
+
 
