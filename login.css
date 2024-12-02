@@ -1,0 +1,82 @@
+/* Set the background image */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff; /* To make text readable on the background */
+}
+
+/* Container for the login forms */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+}
+
+/* Form container styling */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form inputs and buttons */
+.form .input-group {
+    margin-bottom: 15px;
+}
+
+.form .input-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form .input-group input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form .btn {
+    width: 95%;
+    padding: 10px;
+    background: #020406;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form .btn:hover {
+    background: #0056b3;
+}
+
+.link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link a {
+    color: #030406;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+}

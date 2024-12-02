@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="form-container">
+            <!-- Login Form -->
+            <form id="loginForm" class="form active" onsubmit="handleLogin(event)">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <label for="loginUsername">Username</label>
+                    <input type="text" id="loginUsername" placeholder="Enter your username" required />
+                </div>
+                <div class="input-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required />
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p class="link">
+                    <a href="#" onclick="showForm('forgotPasswordForm')">Forgot Password?</a>
+                    |
+                    <a href="#" onclick="showForm('signUpForm')">Sign Up</a>
+                </p>
+                <p id="loginError" class="error-message"></p>
+            </form>
+
+            <!-- Sign-Up Form -->
+            <form id="signUpForm" class="form" onsubmit="handleSignUp(event)" style="display: none;">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <label for="signUpUsername">Username</label>
+                    <input type="text" id="signUpUsername" placeholder="Choose a username" required />
+                </div>
+                <div class="input-group">
+                    <label for="signUpPassword">Password</label>
+                    <input type="password" id="signUpPassword" placeholder="Create a password" required />
+                </div>
+                <div class="input-group">
+                    <label for="signUpEmail">Email</label>
+                    <input type="email" id="signUpEmail" placeholder="Enter your email" required />
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p class="link">
+                    Already have an account? <a href="#" onclick="showForm('loginForm')">Login</a>
+                </p>
+                <p id="signUpError" class="error-message"></p>
+            </form>
+
+            <!-- Forgot Password Form -->
+            <form id="forgotPasswordForm" class="form" onsubmit="handleForgotPassword(event)" style="display: none;">
+                <h2>Forgot Password</h2>
+                <div class="input-group">
+                    <label for="forgotEmail">Email</label>
+                    <input type="email" id="forgotEmail" placeholder="Enter your email" required />
+                </div>
+                <button type="submit" class="btn">Reset Password</button>
+                <p class="link">
+                    <a href="#" onclick="showForm('loginForm')">Back to Login</a>
+                </p>
+                <p id="forgotPasswordError" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+    <script >
+        function showForm(formId) {
+            // Hide all forms
+            document.querySelectorAll('.form').forEach(form => {
+                form.style.display = 'none';
+            });
+            // Show the selected form
+            document.getElementById(formId).style.display = 'block';
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            // Add login logic here
+            alert("Login logic not implemented.");
+        }
+
+        function handleSignUp(event) {
+            event.preventDefault();
+            // Add sign-up logic here
+            alert("Sign-up logic not implemented.");
+        }
+
+        function handleForgotPassword(event) {
+            event.preventDefault();
+            // Add forgot password logic here
+            alert("Forgot password logic not implemented.");
+        }
+    </script>
+</body>
+</html>
