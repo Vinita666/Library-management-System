@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #ffffff;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: #3f51b5;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Profile Icon */
+.profile-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url('https://t3.ftcdn.net/jpg/08/14/34/12/360_F_814341253_X8l4fY5C4xjY6qVJFjar2g24IU6IdG2I.jpg') repeat center center;
+    background-size: cover;
+}
+
+.header-content {
+    color: white;
+    max-width: 1000px;
+    margin-top:20px;
+}
+
+.header-content h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+.header-content p {
+    margin: 20px 0;
+    font-size: 1.5em;
+}
+
+/* Search Bar (Properly Aligned) */
+.search-container {
+    position: absolute;
+    top: 100px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.search-container input {
+    padding: 15px;
+    width: 1000px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.search-container button {
+    padding: 15px 15px;
+    background: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-container button:hover {
+    background: #6690ab;
+}
+
+/* Section */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #292c37;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+.footer {
+    background: #292c37;
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer .about-us,
+.footer .contact-us,
+.footer .help-feedback {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+    margin-left: 600px;
+}
+
+.footer .about-us-content{
+    margin-left: 400px;
+}
+.footer .contact-us-content{
+    margin-left: 400;
+}
+.foo
+
+.footer h3 {
+    color: #ffeb3b;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 5px 0;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* Footer Notes and License */
+.footer-note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.license {
+    text-align: center;
+    font-size: 0.8em;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .search-container input {
+        width: 80%;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}

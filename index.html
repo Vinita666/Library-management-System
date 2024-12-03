@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pride Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">📚 Pride Library</div>
+        <ul class="nav-links">
+            <li><a href="#search">Search</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#help">Help</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#logout">Logout</a></li>
+            <li class="profile-icon">
+                <a href="#"><img src="profile.png" alt="Profile"></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Search Bar Fixed at Top -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search books, research, etc..." />
+            <button class="search-btn" onclick="searchBooks()">Search</button>
+        </div>
+        <!-- Welcome Text -->
+        <div class="header-content">
+            <h1>Welcome to Library</h1>
+            <p>Your gateway to knowledge and resources.</p>
+        </div>
+    </header>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-columns">
+            <!-- About Us -->
+            <div class="about-us">
+                <h3>About Us</h3>
+            </div>
+                <div class="about-us-content">
+                    <p>
+                        Library Management System offers an intuitive platform to access and manage
+                        library resources effortlessly.
+                    </p>
+                </div>
+
+            <!-- Contact Us -->
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+            </div>
+                <div class="contact-us-content">
+                    <ul>
+                        <li>Email: <a href="mailto:GULIBRARY24@gmail.com">GULIBRARY24@gmail.com</a></li>
+                        <li>Facebook: <a href="https://facebook.com/pridelibrary" target="_blank">facebook.com/pridelibrary</a></li>
+                        <li>X: <a href="https://x.com/pridelibrary" target="_blank">x.com/pridelibrary</a></li>
+                        <li>Instagram: <a href="https://instagram.com/pridelibrary" target="_blank">instagram.com/pridelibrary</a></li>
+                    </ul>
+                </div>
+            <!-- Help & Feedback -->
+            <div class="help-feedback">
+                <h3>More Options</h3>
+                <ul>
+                    <li><a href="#help">Help</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#search">Search</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-note">&copy; 2024 Library Management System</p>
+        <p class="license">Licensed under the MIT License.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
